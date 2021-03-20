@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "LapingPage"
+    }
+  },
+  "defaultProject": "LapingPage",
+  "cli": {
+    "analytics": "fc7795b4-1d95-491b-b812-46f3bfc1165c"
+  }
 }

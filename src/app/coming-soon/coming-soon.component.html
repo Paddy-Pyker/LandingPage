@@ -1,0 +1,30 @@
+<div style="background-image: url('../../assets/background.jpg'); height: 135.5vh;">
+
+    <div class="slideshow-container">
+        <div *ngFor="let item of slides;let i = index" style="background: #9e9e9e0d;;
+        ">
+            <img *ngIf="i === currentSlide" [src]='item.src'>
+        </div>
+
+        <a class="prev" (click)="onPreviousClick()">&#10094;</a>
+        <a class="next" (click)="onNextClick()">&#10095;</a>
+    </div>
+    <h1>Coming soon...</h1>
+    <form action="action_page.php">
+        <div class="container1">
+            <h2 style="    text-align: center;">Subscribe to our Newsletter</h2>
+        </div>
+
+        <div class="container1" style="background-color:#ffffffc7">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <label>
+          <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+        </label>
+        </div>
+
+        <div class="container1">
+            <button type="submit">Subscribe</button>
+        </div>
+    </form>
+</div>
