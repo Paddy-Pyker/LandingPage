@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FAQComponent } from './faq/faq.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FAQComponent } from './faq/faq.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

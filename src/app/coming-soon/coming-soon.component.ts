@@ -1,4 +1,6 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-coming-soon',
@@ -12,10 +14,16 @@ export class ComingSoonComponent implements OnInit {
     {src:"../../assets/c3.png"}
   ];
 
+  NewsLetterForm: FormGroup;
+
   currentSlide=0
   constructor() { }
 
   ngOnInit(): void {
+    this.NewsLetterForm = new FormGroup({
+      Name: new FormControl(null, Validators.required),
+      Email: new FormControl(null, Validators.required),
+    })
   }
 
   onPreviousClick() {
@@ -28,6 +36,11 @@ export class ComingSoonComponent implements OnInit {
     const next = this.currentSlide + 1;
     this.currentSlide = next === this.slides.length ? 0 : next;
     console.log("next clicked, new current slide is: ", this.currentSlide);
+  }
+
+  onSubmit(){
+    console.log(this.NewsLetterForm.value);
+    this.NewsLetterForm.reset();
   }
 
 }

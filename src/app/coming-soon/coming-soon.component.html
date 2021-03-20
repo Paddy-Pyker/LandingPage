@@ -10,14 +10,15 @@
         <a class="next" (click)="onNextClick()">&#10095;</a>
     </div>
     <h1>Coming soon...</h1>
-    <form action="action_page.php">
+
+    <form [formGroup]="NewsLetterForm" (ngSubmit)="onSubmit()">
         <div class="container1">
             <h2 style="    text-align: center;">Subscribe to our Newsletter</h2>
         </div>
 
         <div class="container1" style="background-color:#ffffffc7">
-            <input type="text" placeholder="Name" name="name" required>
-            <input type="text" placeholder="Email address" name="mail" required>
+            <input type="text" placeholder="Name" formControlName="Name" required>
+            <input type="text" placeholder="Email address" formControlName="Email" required>
             <label>
           <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
         </label>
